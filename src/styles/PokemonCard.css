@@ -1,0 +1,14 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  
