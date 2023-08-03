@@ -21,7 +21,7 @@ const Config = () => {
     <div className="container">
       <h1>Configuration</h1>
       <div>
-        <label htmlFor="pokemonPerPage">Number of Pokémon per page:</label>
+        <label htmlFor="pokemonPerPage">Number of Pokemon per page:</label>
         <select id="pokemonPerPage" value={pokemonPerPage} onChange={handlePokemonPerPageChange}>
           {pokemonPerPageOptions.map((option) => (
             <option key={option} value={option}>

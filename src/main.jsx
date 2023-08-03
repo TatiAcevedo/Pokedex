@@ -1,23 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { Navigate as Redirect } from 'react-router-dom';
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import store from './store';
+import { Provider } from 'react-redux';
 
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-   
-      <App/> 
-  
-  </React.StrictMode>,
-)
-
-
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root') 
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
 );

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 import PokemonCard from './PokemonCard';
 import PokedexFilter from './PokedexFilter';
-import { Redirect } from 'react-router-dom'; 
+import { Navigate } from 'react-router-dom'; 
 
 const Pokedex = () => {
   const userName = useSelector((state) => state.user.name);
@@ -27,7 +27,7 @@ const Pokedex = () => {
 
   
   if (!isTrainerNameSet) {
-    return <Redirect to="/" />;
+    return <Navigate to="/" />;
   }
 
   return (
