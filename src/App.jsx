@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './store';
+import slices from './slices';
 import Home from './components/Home';
 import Pokedex from './components/Pokedex';
 import PokemonDetails from './components/PokemonDetails';
@@ -10,7 +10,7 @@ import Config from './components/Config';
 
 function App() {
   return (
-    <Provider store={store}>
+    <Provider slices={slices}>
       <Router>
         <Routes>
           <Route exact path="/" component={Home} />
